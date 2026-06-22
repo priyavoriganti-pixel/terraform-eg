@@ -18,3 +18,12 @@ steps:
 
 - script: terraform plan
   displayName: Terraform Plan
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'your-service-connection-name'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      terraform init
+      terraform plan
