@@ -21,5 +21,6 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      terraform init
-      terraform plan
+  terraform init
+  terraform plan
+  terraform apply -auto-approve
