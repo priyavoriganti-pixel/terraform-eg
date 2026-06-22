@@ -17,10 +17,10 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'terraform-connection'
+    azureSubscription: 'terraform-connection'   # <-- your connection name
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
-  terraform init
-  terraform plan
-  terraform apply -auto-approve
+      terraform init
+      terraform plan
+      terraform apply -auto-approve
