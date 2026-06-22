@@ -6,10 +6,9 @@ pool:
 
 steps:
 
-- script: |
-    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-    sudo apt-get update && sudo apt-get install -y terraform
-  displayName: Install Terraform
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
 
 - script: terraform version
   displayName: Check Terraform Version
